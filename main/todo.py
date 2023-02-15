@@ -167,9 +167,6 @@ if __name__ == '__main__':
         elif (args[1] == 'delete' and len(args[2:]) == 0):
             sys.stdout.buffer.write('Error: missing number for deleting todo.'.encode('utf8'))
 
-        elif (args[1] == 'log'):
-            globals()[args[1]]()
-
         else:
             globals()[args[1]](*args[2:])
 
