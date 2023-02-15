@@ -44,7 +44,7 @@ def done(nn):
         dict_util('todo.txt', 'd')
         nn = int(nn)
         f = open('done.txt', 'a')
-        st = 'x '+str(datetime.datetime.today()).split()[0]+' '+d[nn]
+        st = '/ '+str(datetime.datetime.today()).split()[0]+' '+d[nn]
 
         f.write(st)
         f.write("\n")
