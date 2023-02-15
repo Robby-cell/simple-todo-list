@@ -137,7 +137,7 @@ def log():
         l = len(_log)
 
         for i in _log:
-            sys.stdout.buffer.write(f"[{l}] {_log[l]}".encode('utf8'))
+            sys.stdout.buffer.write(f"[{i}] {_log[i]}".encode('utf8'))
             sys.stdout.buffer.write("\n".encode('utf8'))
             l = l - 1
 
