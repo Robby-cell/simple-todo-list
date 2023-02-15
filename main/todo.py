@@ -39,14 +39,14 @@ def ls():
 
 
 def done(nn):
-
+    # adds the complete task to done.txt
     try:
         dict_util('todo.txt', 'd')
         nn = int(nn)
         f = open('done.txt', 'a')
-        st = '/ '+str(datetime.datetime.today()).split()[0]+' '+d[nn]
+        dn = '/ '+str(datetime.datetime.today()).split()[0]+' '+d[nn] # adds date, and task completed to the string
 
-        f.write(st)
+        f.write(dn) # writes the content to the file
         f.write("\n")
         f.close()
 
@@ -105,7 +105,7 @@ def delete(nn):
         print(f'error: todo #{nn} does not exist. nothing deleted')
 
 
-def dict_util(filename, dict):
+def dict_util(filename, dict): # takes name of file to work with, and the dictionary to put it into
 
     # utility function
     try:
