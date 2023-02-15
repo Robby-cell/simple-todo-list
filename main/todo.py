@@ -8,7 +8,7 @@ $ ./todo ls               # Show remaining todos
 $ ./todo delete NUMBER    # Delete a todo
 $ ./todo done NUMBER      # Complete a todo
 $ ./todo help             # Show usage
-$ ./todo report           # Statistics
+$ ./todo stats            # Statistics
 $ ./todo log              # Shows the log of previous commands"""
     sys.stdout.buffer(msg.encode('utf8'))
 
@@ -66,7 +66,7 @@ def done(nn):
         print(f'todo #{nn} does not exist')
 
 
-def report():
+def stats():
     dict_util('todo.txt', 'd')
     try:
 
@@ -178,7 +178,7 @@ $ ./todo ls               # Show remaining todos
 $ ./todo delete NUMBER    # Delete a todo
 $ ./todo done NUMBER      # Complete a todo
 $ ./todo help             # Show usage
-$ ./todo report           # Statistics
+$ ./todo stats            # Statistics
 $ ./todo log              # Shows the log of previous commands"""
         sys.stdout.buffer.write(msg.encode('utf8'))
 
